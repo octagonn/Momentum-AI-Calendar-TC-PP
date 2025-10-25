@@ -1,0 +1,32 @@
+# Keep only HTML files, CSS, logo, and README in GitHub
+
+# Ignore markdown source files (except README.md)
+privacy-policy.md
+terms-and-conditions.md
+support.md
+
+# Ignore conversion script
+convert.py
+
+# Ignore setup documentation
+SETUP_COMPLETE.md
+
+# Ignore backup files
+*.bak
+*.tmp
+*~
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
