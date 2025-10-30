@@ -1,17 +1,31 @@
 // Minimal JS: mobile nav toggle and smooth scrolling
 (function () {
     var toggle = document.getElementById('nav-toggle');
-    var nav = document.getElementById('site-nav');
-    if (toggle && nav) {
+    var navLinks = document.querySelector('.nav-links');
+    
+    if (toggle && navLinks) {
         toggle.addEventListener('click', function () {
-            if (nav.style.display === 'block') {
-                nav.style.display = '';
+            var isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', !isExpanded);
+            
+            if (isExpanded) {
+                navLinks.classList.remove('open');
             } else {
-                nav.style.display = 'block';
+                navLinks.classList.add('open');
             }
+        });
+        
+        // Close menu when clicking on a link
+        var navAnchors = navLinks.querySelectorAll('a');
+        navAnchors.forEach(function (anchor) {
+            anchor.addEventListener('click', function () {
+                toggle.setAttribute('aria-expanded', 'false');
+                navLinks.classList.remove('open');
+            });
         });
     }
 
+    // Smooth scrolling for anchor links
     var links = document.querySelectorAll('a[href^="#"]');
     links.forEach(function (link) {
         link.addEventListener('click', function (e) {

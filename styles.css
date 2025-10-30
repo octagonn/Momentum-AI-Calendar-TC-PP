@@ -24,7 +24,7 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--foreground);
     background: var(--background);
@@ -37,6 +37,10 @@ body {
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.01em;
 }
 
 /* Floating Background Effects */
@@ -131,6 +135,8 @@ header {
 header h1 {
     font-size: 2.5rem;
     font-weight: 700;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.02em;
     background: linear-gradient(135deg, var(--neon-purple) 0%, var(--neon-purple-light) 50%, var(--neon-purple) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -142,7 +148,9 @@ header h1 {
 .tagline {
     font-size: 1.1rem;
     color: var(--muted-foreground);
-    font-weight: 300;
+    font-weight: 400;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.01em;
     position: relative;
     z-index: 1;
 }
@@ -162,12 +170,72 @@ nav {
     gap: 0.5rem;
 }
 
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 44px;
+    height: 44px;
+    margin: 0.5rem auto;
+    position: relative;
+    z-index: 101;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-toggle:hover {
+    background: rgba(139, 92, 246, 0.1);
+    border-radius: 8px;
+}
+
+.nav-toggle:focus {
+    outline: 2px solid var(--neon-purple);
+    outline-offset: 2px;
+    border-radius: 8px;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--neon-purple);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+    display: block;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 100%;
+}
+
 nav a {
     color: var(--muted-foreground);
     text-decoration: none;
     padding: 1.2rem 2rem;
     display: inline-block;
     font-weight: 500;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.01em;
     transition: all 0.3s ease;
     border-bottom: 3px solid transparent;
     position: relative;
@@ -234,6 +302,8 @@ main {
 .hero h2 {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 700;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.03em;
     color: var(--foreground);
     margin-bottom: 1.5rem;
     line-height: 1.2;
@@ -252,11 +322,14 @@ main {
 .hero p {
     font-size: clamp(1.1rem, 2vw, 1.5rem);
     color: var(--muted-foreground);
+    font-weight: 400;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.01em;
     margin-bottom: 2rem;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 .badge-row {
@@ -322,8 +395,10 @@ main {
     text-align: center;
     font-size: clamp(2rem, 4vw, 3rem);
     color: var(--foreground);
-    margin-bottom: 3rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 3rem;
 }
 
 .section-heading::after {
@@ -393,7 +468,9 @@ main {
     color: var(--foreground);
     margin-bottom: 0.75rem;
     font-size: 1.25rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 .feature p {
@@ -453,7 +530,9 @@ main {
     color: var(--foreground);
     margin-bottom: 1rem;
     font-size: 1.5rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 .card p {
@@ -470,7 +549,9 @@ main {
     color: var(--foreground);
     text-decoration: none;
     border-radius: 50px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 600;
+    letter-spacing: -0.01em;
     transition: all 0.3s ease;
     box-shadow: 0 0 30px rgba(139, 92, 246, 0.6), 0 0 60px rgba(139, 92, 246, 0.4);
     border: none;
@@ -516,15 +597,19 @@ main {
 .contact-section h3 {
     color: var(--foreground);
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
 }
 
 .email-link {
     display: inline-block;
     color: var(--neon-purple);
     font-size: 1.3rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 600;
+    letter-spacing: -0.01em;
     text-decoration: none;
     padding: 1rem 2rem;
     background: rgba(139, 92, 246, 0.1);
@@ -555,6 +640,9 @@ main {
 .content h1 {
     color: var(--foreground);
     font-size: 2.5rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
     margin-bottom: 1rem;
     background: linear-gradient(135deg, var(--neon-purple) 0%, var(--neon-purple-light) 100%);
     -webkit-background-clip: text;
@@ -565,6 +653,9 @@ main {
 .content h2 {
     color: var(--foreground);
     font-size: 2rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
     margin: 2.5rem 0 1rem 0;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--border-purple);
@@ -585,19 +676,27 @@ main {
 .content h3 {
     color: var(--foreground);
     font-size: 1.5rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
     margin: 2rem 0 1rem 0;
 }
 
 .content h4 {
     color: var(--neon-purple);
     font-size: 1.2rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
     margin: 1.5rem 0 0.8rem 0;
 }
 
 .content p {
     margin-bottom: 1rem;
-    line-height: 1.8;
+    line-height: 1.75;
     color: var(--muted-foreground);
+    font-weight: 400;
+    letter-spacing: -0.01em;
 }
 
 .content ul, .content ol {
@@ -738,13 +837,18 @@ footer a:hover {
     color: var(--foreground);
     margin-bottom: 1.5rem;
     font-size: 2rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
 #reset-form label {
     display: block;
     color: var(--foreground);
     margin-bottom: 0.5rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 500;
+    letter-spacing: -0.01em;
 }
 
 #reset-form input {
@@ -754,7 +858,10 @@ footer a:hover {
     border: 1px solid var(--border-purple);
     border-radius: 10px;
     color: var(--foreground);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
     transition: all 0.3s ease;
 }
 
@@ -785,6 +892,9 @@ footer a:hover {
     color: var(--foreground);
     margin-bottom: 1rem;
     font-size: 1.75rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
 #reset-success p {
@@ -834,6 +944,26 @@ footer a:hover {
     .logo-container {
         flex-direction: column;
         gap: 1rem;
+    }
+    
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        background: rgba(17, 17, 17, 0.95);
+    }
+    
+    .nav-links.open {
+        display: flex;
+        max-height: 1000px;
+        transition: max-height 0.5s ease-in;
     }
     
     nav {
