@@ -126,6 +126,18 @@ nav a.active {
     background: var(--light-bg);
 }
 
+/* Mobile Nav Toggle (hidden by default; can be enabled if needed) */
+#nav-toggle {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    z-index: 200;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: 2px solid var(--pale-purple);
+    background: var(--white);
+}
+
 /* Main Content */
 main {
     padding: 3rem 2rem;
@@ -203,6 +215,25 @@ main {
 .btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 25px rgba(168, 85, 247, 0.4);
+}
+
+/* Landing sections */
+.section-heading {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--deep-purple);
+}
+
+.badge-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.store-badge img {
+    height: 52px;
+    display: block;
 }
 
 /* Info Section */
