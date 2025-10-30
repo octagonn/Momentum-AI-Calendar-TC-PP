@@ -18,7 +18,7 @@
     <meta name="twitter:image" content="https://momentumaicalendar.com/logo.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <meta name="theme-color" content="#7C3AED">
+    <meta name="theme-color" content="#8B5CF6">
 </head>
 <body>
     <div class="container">
@@ -31,18 +31,22 @@
         </header>
 
         <nav id="site-nav">
-            <a href="#features" class="active">Features</a>
+            <a href="#features">Features</a>
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
             <a href="support.html">Support</a>
             <a href="privacy-policy.html">Privacy</a>
             <a href="terms-and-conditions.html">Terms</a>
-            <a href="#download">Download</a>
+            <a href="#download" class="active">Download</a>
         </nav>
 
         <main>
+            <!-- Hero Section -->
             <section class="hero" id="home">
-                <h2>Plan your week. Hit your goals. Reduce stress.</h2>
+                <h2>
+                    Plan your week. Hit your goals.
+                    <span class="gradient-text">Reduce stress.</span>
+                </h2>
                 <p>Your intelligent calendar assistant for effortless time management.</p>
                 <div class="badge-row">
                     <a class="store-badge" href="https://apps.apple.com/app/id6753736271" aria-label="Download on the App Store">
@@ -51,62 +55,78 @@
                 </div>
             </section>
 
+            <!-- Features Section -->
             <section id="features" class="info-section">
                 <h3 class="section-heading">Features</h3>
                 <div class="features">
                     <div class="feature">
                         <span class="feature-icon">🤖</span>
                         <h4>AI Planning Chat</h4>
-                        <p>Clarify goals and break them into scheduled steps with AI.</p>
+                        <p>Clarify goals and break them into scheduled steps with AI assistance.</p>
                     </div>
                     <div class="feature">
                         <span class="feature-icon">🗓️</span>
                         <h4>Smart Scheduling</h4>
-                        <p>Auto-schedule tasks into free time blocks around events.</p>
+                        <p>Auto-schedule tasks into free time blocks around your events.</p>
                     </div>
                     <div class="feature">
                         <span class="feature-icon">🔥</span>
                         <h4>Streaks & Goals</h4>
-                        <p>Build momentum with consistent daily and weekly progress.</p>
+                        <p>Build momentum with consistent daily and weekly progress tracking.</p>
                     </div>
                     <div class="feature">
                         <span class="feature-icon">🔔</span>
                         <h4>Smart Notifications</h4>
-                        <p>Stay on track with timely nudges and reminders.</p>
+                        <p>Stay on track with timely nudges and intelligent reminders.</p>
                     </div>
                     <div class="feature">
                         <span class="feature-icon">🔒</span>
                         <h4>Privacy‑first</h4>
-                        <p>Your account is protected by secure Supabase Auth.</p>
+                        <p>Your account is protected by secure Supabase authentication.</p>
                     </div>
                     <div class="feature">
                         <span class="feature-icon">📱</span>
                         <h4>iOS Optimized</h4>
-                        <p>Fast, native-feel experience on your iPhone.</p>
+                        <p>Fast, native-feel experience designed for your iPhone.</p>
                     </div>
                 </div>
             </section>
 
+            <!-- Pricing Section -->
             <section id="pricing" class="info-section">
                 <h3 class="section-heading">Pricing</h3>
-                <p style="text-align:center; color: var(--text-gray);">Free to try. Upgrade to Pro in‑app for advanced AI features.</p>
+                <p style="text-align:center; color: var(--muted-foreground); font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+                    Free to try. Upgrade to Pro in‑app for advanced AI features and unlimited planning.
+                </p>
             </section>
 
+            <!-- FAQ Section -->
             <section id="faq" class="info-section">
-                <h3 class="section-heading">FAQ</h3>
-                <div class="content" style="max-width:900px;">
-                    <h4>How do I reset my password?</h4>
-                    <p>In the app, tap “Forgot password?”. You’ll receive an email that links to this site to set a new password.</p>
-                    <h4>Is my data private?</h4>
-                    <p>Yes. See our <a href="privacy-policy.html">Privacy Policy</a> for details.</p>
-                    <h4>How do subscriptions work?</h4>
-                    <p>Manage or cancel anytime via your iOS Subscriptions settings.</p>
+                <h3 class="section-heading">Frequently Asked Questions</h3>
+                <div class="content" style="max-width:900px; margin: 0 auto;">
+                    <div style="text-align: left;">
+                        <h4>How do I reset my password?</h4>
+                        <p>In the app, tap "Forgot password?" on the login screen. You'll receive an email with a link to reset your password securely on our website.</p>
+                        
+                        <h4>Is my data private and secure?</h4>
+                        <p>Yes. We use Supabase for secure authentication and data storage. See our <a href="privacy-policy.html">Privacy Policy</a> for complete details on how we protect your information.</p>
+                        
+                        <h4>How do subscriptions work?</h4>
+                        <p>Subscriptions are managed through Apple's App Store. You can cancel anytime via your iOS Settings → Subscriptions. Cancellations take effect at the end of your current billing period.</p>
+                        
+                        <h4>Can I use Momentum on multiple devices?</h4>
+                        <p>Yes! Your account syncs across all your iOS devices when you sign in with the same credentials.</p>
+                        
+                        <h4>What makes the AI features special?</h4>
+                        <p>Our AI helps break down goals into actionable steps, suggests optimal scheduling times, and learns from your patterns to provide better recommendations over time.</p>
+                    </div>
                 </div>
             </section>
 
+            <!-- Download CTA Section -->
             <section id="download" class="contact-section">
                 <h3>Get Momentum: AI Calendar</h3>
-                <p>Available on iOS</p>
+                <p style="color: var(--muted-foreground); margin-bottom: 2rem;">Available now on iOS</p>
                 <a class="store-badge" href="https://apps.apple.com/app/id6753736271" aria-label="Download on the App Store">
                     <img src="app-store-logo.png" alt="Download on the App Store" style="height:52px;">
                 </a>
@@ -123,7 +143,6 @@
         </footer>
     </div>
 
-    <button id="nav-toggle" style="display:none;">Menu</button>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>
